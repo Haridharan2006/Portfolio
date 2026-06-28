@@ -17,7 +17,7 @@ export const projects = [
       "AI",
     ],
 
-    github: "",
+    github: "https://github.com/Haridharan2006/ai-prescription-app",
 
     demo: "",
   },
@@ -40,7 +40,7 @@ export const projects = [
       "Embeddings",
     ],
 
-    github: "",
+    github: "https://github.com/Haridharan2006/icd-document-chatbot",
 
     demo: "",
   },
@@ -63,7 +63,29 @@ export const projects = [
       "JWT",
     ],
 
-    github: "",
+    github: "https://github.com/Haridharan2006/auth-system",
+
+    demo: "",
+  },
+  {
+    id: 4,
+
+    title: "Resume sorter with Background check",
+
+    image: "/project-images/resume.jpeg",
+    
+    description:
+      "An AI-powered resume screening system that ranks candidates by combining resume-job matching with social media behavior analysis using NLP-based toxicity detection.",
+
+    technologies: [
+      "Python 3",
+      "Flask",
+      "Sentence Transformers",
+      "Detoxify",
+      "SBERT",
+    ],
+
+    github: "https://github.com/Haridharan2006/Resume-sorter",
 
     demo: "",
   },
