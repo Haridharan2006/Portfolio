@@ -4,7 +4,7 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import Container from "../ui/Container";
 import SectionTitle from "../ui/SectionTitle";
 import { projects } from "../data/projects";
-
+import ImageGallery from "./ImageGallery";
 function Projects() {
   return (
     <section id="projects">
@@ -29,16 +29,15 @@ function Projects() {
 
               <div className={index % 2 ? "lg:order-2" : ""}>
                 <div className="card
-p-10
-border
-border-slate-700
-hover:border-blue-500/40
-transition-all
-duration-300 overflow-hidden hover:shadow-2xl transition duration-500">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full hover:scale-105 transition duration-700"
+                                p-10
+                                border
+                                border-slate-700
+                                hover:border-blue-500/40
+                                transition-all
+                                duration-300 overflow-hidden hover:shadow-2xl transition duration-500">
+                  <ImageGallery
+                    images={project.images}
+                    title={project.title}
                   />
                 </div>
               </div>

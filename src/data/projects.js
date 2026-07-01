@@ -4,7 +4,11 @@ export const projects = [
 
     title: "AI Medical Prescription Generator",
 
-    image: "/project-images/prescription.png",
+    images: [
+        "/project-images/prescription/1.jpeg",
+        "/project-images/prescription/2.png",
+        "/project-images/prescription/3.png",
+    ],
 
     description:
       "An AI-powered healthcare application that converts doctor speech into structured prescriptions using speech recognition, editable drafts and PDF generation.",
@@ -27,7 +31,9 @@ export const projects = [
 
     title: "ICD Query Chatbot",
 
-    image: "/project-images/chatbot.png",
+    images: [
+        "/project-images/chatbot/1.png",
+    ],
 
     description:
       "An intelligent chatbot capable of answering questions from ICD-10 and ICD-11 PDFs using semantic search, embeddings and LLM-powered retrieval.",
@@ -50,7 +56,11 @@ export const projects = [
 
     title: "OAuth2 Authentication System",
 
-    image: "/project-images/oauth.png",
+    images: [
+        "/project-images/oauth/1.png",
+        "/project-images/oauth/2.jpeg",
+        "/project-images/oauth/3.jpeg",
+    ],
 
     description:
       "Enterprise authentication system supporting JWT, PostgreSQL, Docker, Keycloak, KrakenD API Gateway and Nginx reverse proxy.",
@@ -72,7 +82,10 @@ export const projects = [
 
     title: "Resume sorter with Background check",
 
-    image: "/project-images/resume.jpeg",
+    images: [
+        "/project-images/resume/1.jpeg",
+        "/project-images/resume/2.jpeg",
+    ],
     
     description:
       "An AI-powered resume screening system that ranks candidates by combining resume-job matching with social media behavior analysis using NLP-based toxicity detection.",

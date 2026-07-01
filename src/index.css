@@ -109,3 +109,36 @@ font-size:2.4rem;
 }
 
 }
+.swiper-button-next,
+.swiper-button-prev{
+    color:#3b82f6;
+    background:rgba(15,23,42,.75);
+    width:52px;
+    height:52px;
+    border-radius:999px;
+    transition:.3s;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+    background:#2563eb;
+    color:white;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.swiper-pagination-bullet{
+    width:10px;
+    height:10px;
+    background:#94a3b8;
+    opacity:1;
+}
+
+.swiper-pagination-bullet-active{
+    background:#3b82f6;
+    transform:scale(1.3);
+}
