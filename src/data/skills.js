@@ -6,7 +6,6 @@ export const skills = [
       "Java",
       "JavaScript",
       "SQL",
-      "C",
     ],
   },
 
@@ -26,11 +25,6 @@ export const skills = [
     items: [
       "Node.js",
       "Express.js",
-      "REST APIs",
-      "JWT",
-      "OAuth2",
-      "Keycloak",
-      "KrakenD",
     ],
   },
 
@@ -44,16 +38,12 @@ export const skills = [
   },
 
   {
-    category: "Artificial Intelligence",
+    category: "Technologies",
     items: [
+      "AI",
       "Machine Learning",
-      "Deep Learning",
-      "LangChain",
-      "LLMs",
       "TensorFlow",
       "Scikit-learn",
-      "Sentence Transformers",
-      "Vector Search",
     ],
   },
 

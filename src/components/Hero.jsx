@@ -71,7 +71,7 @@ function Hero() {
               </Button>
             </div>
 
-            <div className="flex gap-10 mt-12 text-2xl">
+            <div className="flex gap-5 mt-10">
 
               <a
                 href={socialLinks.github}

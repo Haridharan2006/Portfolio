@@ -6,14 +6,14 @@ function Button({
   ...props
 }) {
   const base =
-    "inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-semibold transition-all duration-300";
+    "inline-flex items-center justify-center px-7 py-4 rounded-xl font-semibold text-base transition-all duration-300";
 
   const variants = {
     primary:
-      "bg-blue-600 text-white hover:bg-blue-500 hover:-translate-y-0.5 shadow-lg shadow-blue-600/20",
+      "bg-blue-600 text-white hover:bg-blue-600 hover:bg-blue-500 hover:scale-105 shadow-lg shadow-blue-500/30",
 
     secondary:
-      "border border-slate-600 bg-slate-900 text-white hover:border-blue-500 hover:bg-slate-800",
+      "border border-slate-600 hover:border-blue-500 hover:bg-slate-800 hover:scale-105",
   };
 
   if (href) {
