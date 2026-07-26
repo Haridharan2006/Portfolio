@@ -2,110 +2,109 @@ import { motion } from "framer-motion";
 
 import Container from "../ui/Container";
 import SectionTitle from "../ui/SectionTitle";
+import TechChip from "../ui/TechChip";
 
 import { skills } from "../data/skills";
 
 function Skills() {
   return (
-    <section id="skills" className="py-28">
+    <section
+      id="skills"
+      className="py-32"
+    >
       <Container>
         <SectionTitle
-          eyebrow="Skills"
-          title="Technologies I work with."
-          description="A combination of programming languages, frameworks, databases and AI technologies that I use to build modern applications."
+          eyebrow="TECHNICAL EXPERTISE"
+          title="Technologies I use to build modern applications."
+          description="A growing toolkit spanning Artificial Intelligence, Backend Engineering, Databases, Cloud Technologies, and Full Stack Development."
         />
 
-        <div className="mt-20 space-y-12">
-
+        <div className="mt-24 space-y-10">
           {skills.map((group, index) => (
-
             <motion.div
               key={group.category}
-              initial={{ opacity: 0, y: 25 }}
+              initial={{ opacity: 0, y: 35 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{
-                duration: 0.5,
+                duration: 0.6,
                 delay: index * 0.08,
               }}
+              whileHover={{
+                y: -4,
+              }}
               className="
+                rounded-3xl
                 border
-                border-slate-800
-                rounded-2xl
-                bg-slate-900/30
-                backdrop-blur-md
-                p-7
-                hover:border-blue-500/50
+                border-white/10
+                bg-slate-900/40
+                backdrop-blur-xl
+                p-8
                 transition-all
                 duration-300
+                hover:border-blue-500/40
+                hover:shadow-[0_15px_40px_rgba(59,130,246,.15)]
               "
             >
-
-              <div className="grid lg:grid-cols-[220px_1fr] gap-8 items-start">
-
-                {/* Category */}
+              <div
+                className="
+                  grid
+                  gap-8
+                  lg:grid-cols-[240px_1fr]
+                  lg:items-start
+                "
+              >
+                {/* CATEGORY */}
 
                 <div>
+                  <p
+                    className="
+                      text-xs
+                      uppercase
+                      tracking-[0.35em]
+                      text-blue-400
+                      font-semibold
+                    "
+                  >
+                    CATEGORY
+                  </p>
 
                   <h3
                     className="
-                      uppercase
-                      tracking-[0.30em]
-                      text-sm
+                      mt-3
+                      text-2xl
                       font-bold
-                      text-blue-400
+                      text-white
                     "
                   >
                     {group.category}
                   </h3>
-
                 </div>
 
-                {/* Skills */}
+                {/* SKILLS */}
 
                 <div className="flex flex-wrap gap-4">
-
                   {group.items.map((skill) => (
-
-                    <motion.span
-                      whileHover={{
-                        scale: 1.05,
-                        y: -2,
-                      }}
+                    <motion.div
                       key={skill}
-                      className="
-                        px-5
-                        py-2.5
-                        rounded-xl
-                        border
-                        border-slate-700
-                        bg-slate-800/60
-                        text-slate-200
-                        text-sm
-                        font-medium
-                        transition-all
-                        duration-300
-                        hover:border-blue-500
-                        hover:bg-blue-500/10
-                        hover:text-white
-                        cursor-default
-                      "
+                      whileHover={{
+                        y: -3,
+                        scale: 1.03,
+                      }}
+                      whileTap={{
+                        scale: 0.97,
+                      }}
                     >
-                      {skill}
-                    </motion.span>
-
+                      <TechChip>
+                        {skill}
+                      </TechChip>
+                    </motion.div>
                   ))}
-
                 </div>
-
               </div>
-
             </motion.div>
-
           ))}
-
         </div>
-
       </Container>
     </section>
   );

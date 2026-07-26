@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -16,7 +16,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/zoom";
 
-import { FaExpand } from "react-icons/fa";
+import {
+  FaExpand,
+  FaTimes,
+} from "react-icons/fa";
 
 function ImageGallery({ images, title }) {
   const [fullscreen, setFullscreen] = useState(false);
@@ -26,6 +29,30 @@ function ImageGallery({ images, title }) {
     setActiveImage(image);
     setFullscreen(true);
   };
+
+  const closeFullscreen = () => {
+    setFullscreen(false);
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        closeFullscreen();
+      }
+    };
+
+    if (fullscreen) {
+      document.body.style.overflow = "hidden";
+      window.addEventListener("keydown", handleKeyDown);
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [fullscreen]);
 
   return (
     <>
@@ -39,87 +66,161 @@ function ImageGallery({ images, title }) {
           Zoom,
         ]}
         navigation
-        pagination={{ clickable: true }}
-        keyboard={{ enabled: true }}
+        pagination={{
+          clickable: true,
+          dynamicBullets: true,
+        }}
+        keyboard={{
+          enabled: true,
+        }}
         mousewheel
-        zoom
-        loop
+        zoom={{
+          maxRatio: 3,
+        }}
         autoplay={{
           delay: 3500,
           disableOnInteraction: false,
+          pauseOnMouseEnter: true,
         }}
-        spaceBetween={30}
+        loop
+        spaceBetween={20}
         slidesPerView={1}
-        className="rounded-2xl overflow-hidden shadow-2xl"
+        className="overflow-hidden rounded-3xl"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-
-            <div className="swiper-zoom-container relative">
+            <div className="swiper-zoom-container group relative overflow-hidden rounded-3xl">
 
               <img
                 src={image}
                 alt={`${title} ${index + 1}`}
                 onClick={() => openFullscreen(image)}
                 className="
-                    w-full
-                    h-[420px]
-                    lg:h-[480px]
-                    object-cover
-                    rounded-2xl
-                    cursor-pointer
-                    transition
-                    duration-500
-                    hover:scale-105
+                  h-[340px]
+                  w-full
+                  cursor-pointer
+                  rounded-3xl
+                  object-cover
+                  transition-transform
+                  duration-700
+                  group-hover:scale-[1.02]
+                  md:h-[420px]
+                  lg:h-[460px]
                 "
-                />
+              />
+
+              {/* Gradient Overlay */}
+
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  inset-0
+                  bg-gradient-to-t
+                  from-black/20
+                  via-transparent
+                  to-transparent
+                  opacity-0
+                  transition-opacity
+                  duration-300
+                  group-hover:opacity-100
+                "
+              />
+
+              {/* Expand Button */}
 
               <button
                 onClick={() => openFullscreen(image)}
                 className="
                   absolute
-                  top-4
-                  right-4
-                  bg-black/70
-                  p-3
+                  right-5
+                  top-5
+                  flex
+                  h-11
+                  w-11
+                  items-center
+                  justify-center
                   rounded-full
+                  border
+                  border-white/10
+                  bg-slate-900/80
+                  text-white
+                  backdrop-blur-xl
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:border-blue-500
                   hover:bg-blue-600
-                  transition
+                  hover:shadow-lg
+                  hover:shadow-blue-500/30
                 "
               >
                 <FaExpand />
               </button>
 
             </div>
-
           </SwiperSlide>
         ))}
       </Swiper>
 
-      {/* FULLSCREEN MODAL */}
+      {/* FULLSCREEN */}
 
       {fullscreen && (
         <div
+          onClick={closeFullscreen}
           className="
             fixed
             inset-0
-            bg-black/90
             z-[9999]
             flex
             items-center
             justify-center
-            p-8
+            bg-black/95
+            p-6
+            backdrop-blur-md
+            animate-fadeIn
           "
-          onClick={() => setFullscreen(false)}
         >
+
+          {/* Close */}
+
+          <button
+            onClick={closeFullscreen}
+            className="
+              absolute
+              right-8
+              top-8
+              flex
+              h-12
+              w-12
+              items-center
+              justify-center
+              rounded-full
+              border
+              border-white/10
+              bg-slate-900/80
+              text-white
+              transition-all
+              duration-300
+              hover:bg-red-500
+            "
+          >
+            <FaTimes />
+          </button>
+
           <img
             src={activeImage}
+            alt={title}
+            onClick={(e) => e.stopPropagation()}
             className="
-              max-w-full
-              max-h-full
-              rounded-xl
+              max-h-[90vh]
+              max-w-[92vw]
+              rounded-3xl
+              object-contain
+              shadow-[0_30px_100px_rgba(0,0,0,.6)]
             "
           />
+
         </div>
       )}
     </>

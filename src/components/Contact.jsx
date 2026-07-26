@@ -1,10 +1,13 @@
 import { useRef, useState } from "react";
+import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+
 import {
   FaGithub,
   FaLinkedin,
   FaEnvelope,
   FaMapMarkerAlt,
+  FaPaperPlane,
 } from "react-icons/fa";
 
 import Container from "../ui/Container";
@@ -42,112 +45,237 @@ function Contact() {
       });
   };
 
+  const contactItems = [
+    {
+      icon: <FaEnvelope />,
+      title: "Email",
+      value: socialLinks.email,
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=haridharanbs2006@gmail.com",
+    },
+    {
+      icon: <FaGithub />,
+      title: "GitHub",
+      value: "Haridharan2006",
+      href: socialLinks.github,
+    },
+    {
+      icon: <FaLinkedin />,
+      title: "LinkedIn",
+      value: "Connect with me",
+      href: socialLinks.linkedin,
+    },
+    {
+      icon: <FaMapMarkerAlt />,
+      title: "Location",
+      value: "Bengaluru, Karnataka, India",
+    },
+  ];
+
   return (
-    <section id="contact">
+    <section
+      id="contact"
+      className="py-32"
+    >
       <Container>
 
         <SectionTitle
-          eyebrow="Contact"
-          title="Let's Build Something Together."
-          description="I'm always open to internships, collaborations and exciting software engineering opportunities."
+          eyebrow="GET IN TOUCH"
+          title="Let's build something meaningful together."
+          description="Whether it's an internship, collaboration, research opportunity, or an exciting software engineering project, I'd love to hear from you."
         />
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 gap-20">
+        <div className="mt-24 grid gap-16 lg:grid-cols-[0.9fr_1.1fr]">
 
-          {/* Left */}
+          {/* LEFT */}
 
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: .6 }}
+          >
 
-            <h3 className="text-3xl font-bold">
-
-              Get in Touch
-
+            <h3 className="text-4xl font-bold">
+              Let's connect.
             </h3>
 
-            <div className="mt-10 space-y-6">
+            <p className="mt-6 leading-8 text-slate-400">
+              I'm always interested in discussing Artificial Intelligence,
+              Machine Learning, Backend Engineering, internships,
+              freelance work and innovative software projects.
+            </p>
 
-              <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=haridharanbs2006@gmail.com"
-                className="flex items-center gap-4 hover:text-sky-400 transition"
-              >
-                <FaEnvelope />
+            <div className="mt-12 space-y-5">
 
-                {socialLinks.email}
+              {contactItems.map((item) => {
 
-              </a>
+                const Card = (
+                  <motion.div
+                    whileHover={{
+                      y: -4,
+                    }}
+                    className="
+                      flex
+                      items-center
+                      gap-5
+                      rounded-2xl
+                      border
+                      border-white/10
+                      bg-slate-900/40
+                      p-5
+                      backdrop-blur-xl
+                      transition-all
+                      duration-300
+                      hover:border-blue-500/40
+                    "
+                  >
 
-              <a
-                href={socialLinks.github}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-4 hover:text-sky-400 transition"
-              >
-                <FaGithub />
+                    <div
+                      className="
+                        flex
+                        h-12
+                        w-12
+                        items-center
+                        justify-center
+                        rounded-xl
+                        bg-blue-500/10
+                        text-blue-400
+                        text-lg
+                      "
+                    >
+                      {item.icon}
+                    </div>
 
-                GitHub
+                    <div>
 
-              </a>
+                      <p className="text-sm text-slate-500">
+                        {item.title}
+                      </p>
 
-              <a
-                href={socialLinks.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-4 hover:text-sky-400 transition"
-              >
-                <FaLinkedin />
+                      <p className="mt-1 font-medium">
+                        {item.value}
+                      </p>
 
-                LinkedIn
+                    </div>
 
-              </a>
+                  </motion.div>
+                );
 
-              <div className="flex items-center gap-4">
+                if (item.href) {
+                  return (
+                    <a
+                      key={item.title}
+                      href={item.href}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {Card}
+                    </a>
+                  );
+                }
 
-                <FaMapMarkerAlt />
-
-                Bengaluru, Karnataka, India
-
-              </div>
+                return (
+                  <div key={item.title}>
+                    {Card}
+                  </div>
+                );
+              })}
 
             </div>
 
-          </div>
+          </motion.div>
 
-          {/* Right */}
+          {/* FORM */}
 
-          <form
+          <motion.form
             ref={form}
             onSubmit={sendEmail}
-            className="space-y-5"
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: .6 }}
+            className="
+              rounded-3xl
+              border
+              border-white/10
+              bg-slate-900/40
+              p-8
+              backdrop-blur-xl
+            "
           >
 
-            <input
-              name="name"
-              placeholder="Your Name"
-              required
-              className="w-full rounded-xl border border-white/10 bg-transparent p-4"
-            />
+            <h3 className="text-2xl font-bold">
+              Send me a message
+            </h3>
 
-            <input
-              name="email"
-              type="email"
-              placeholder="Your Email"
-              required
-              className="w-full rounded-xl border border-white/10 bg-transparent p-4"
-            />
+            <div className="mt-8 space-y-6">
 
-            <textarea
-              name="message"
-              rows="6"
-              placeholder="Your Message"
-              required
-              className="w-full rounded-xl border border-white/10 bg-transparent p-4"
-            />
+              <input
+                name="name"
+                placeholder="Your Name"
+                required
+                className="
+                  w-full
+                  rounded-2xl
+                  border
+                  border-white/10
+                  bg-white/5
+                  p-4
+                  outline-none
+                  transition
+                  focus:border-blue-500
+                "
+              />
 
-            <Button type="submit" disabled={loading}>
-              {loading ? "Sending..." : "Send Message"}
-            </Button>
+              <input
+                name="email"
+                type="email"
+                placeholder="Your Email"
+                required
+                className="
+                  w-full
+                  rounded-2xl
+                  border
+                  border-white/10
+                  bg-white/5
+                  p-4
+                  outline-none
+                  transition
+                  focus:border-blue-500
+                "
+              />
 
-          </form>
+              <textarea
+                name="message"
+                rows="7"
+                placeholder="Tell me ..."
+                required
+                className="
+                  w-full
+                  rounded-2xl
+                  border
+                  border-white/10
+                  bg-white/5
+                  p-4
+                  outline-none
+                  resize-none
+                  transition
+                  focus:border-blue-500
+                "
+              />
+
+              <Button
+                type="submit"
+                disabled={loading}
+              >
+                <FaPaperPlane />
+
+                {loading ? "Sending..." : "Send Message"}
+              </Button>
+
+            </div>
+
+          </motion.form>
 
         </div>
 
