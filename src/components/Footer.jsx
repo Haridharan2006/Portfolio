@@ -133,39 +133,6 @@ function Footer() {
                 ))}
 
               </div>
-
-              <button
-                onClick={() =>
-                  window.scrollTo({
-                    top: 0,
-                    behavior: "smooth",
-                  })
-                }
-                className="
-                  mt-10
-                  flex
-                  items-center
-                  gap-3
-                  rounded-full
-                  border
-                  border-white/10
-                  bg-white/5
-                  px-5
-                  py-3
-                  text-sm
-                  text-slate-300
-                  transition-all
-                  duration-300
-                  hover:-translate-y-1
-                  hover:border-blue-500
-                  hover:text-white
-                "
-              >
-                Back to Top
-
-                <FaArrowUp />
-              </button>
-
             </motion.div>
 
           </div>
