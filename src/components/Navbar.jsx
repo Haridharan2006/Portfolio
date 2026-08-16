@@ -12,8 +12,8 @@ function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
 
   const links = [
-    { label: "Projects", to: "/#projects", id: "projects" },
     { label: "About", to: "/#about", id: "about" },
+    { label: "Projects", to: "/#projects", id: "projects" },
     { label: "Skills", to: "/#skills", id: "skills" },
     { label: "Experience", to: "/#experience", id: "experience" },
     { label: "Certificates", to: "/#certifications", id: "certifications" },

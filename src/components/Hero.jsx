@@ -152,7 +152,7 @@ function Hero() {
               Machine Learning Solutions
               <br />
 
-              & Scalable Backend Systems.
+              & Scalable Full Stack Systems.
             </motion.h2>
 
             <motion.p
@@ -169,7 +169,7 @@ function Hero() {
             >
               Computer Science undergraduate passionate about
               Artificial Intelligence, Machine Learning,
-              Backend Engineering and building
+              Full Stack Engineering and building
               production-ready software that solves
               real-world problems.
             </motion.p>

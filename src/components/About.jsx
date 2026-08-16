@@ -32,7 +32,7 @@ function About() {
         <SectionTitle
           eyebrow="ABOUT ME"
           title="Passionate about building intelligent software that creates real-world impact."
-          description="Combining Artificial Intelligence, Machine Learning and Backend Engineering to build scalable applications that solve meaningful problems."
+          description="Combining Artificial Intelligence, Machine Learning and Full Stack Engineering to build scalable applications that solve meaningful problems."
         />
 
         <div
@@ -67,7 +67,7 @@ function About() {
               </span>{" "}
               and{" "}
               <span className="gradient-text">
-                scalable backend systems.
+                scalable full stack systems.
               </span>
             </h3>
 
@@ -80,8 +80,8 @@ function About() {
               "
             >
               I'm a Computer Science undergraduate with a strong interest in
-              Artificial Intelligence, Machine Learning, Backend Engineering,
-              and Distributed Systems. I enjoy transforming ideas into products
+              Artificial Intelligence, Machine Learningand Full Stack Engineering
+              . I enjoy transforming ideas into products
               that are practical, scalable, and designed for real-world use.
             </p>
 
