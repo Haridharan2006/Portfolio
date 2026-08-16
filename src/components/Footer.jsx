@@ -54,25 +54,6 @@ function Footer() {
                 </span>
 
               </h2>
-
-              <p
-                className="
-                  mt-6
-                  max-w-xl
-                  text-lg
-                  leading-9
-                  text-slate-400
-                "
-              >
-                Computer Science undergraduate passionate about
-                Artificial Intelligence, Machine Learning,
-                Backend Engineering and scalable software systems.
-
-                I enjoy building modern applications that solve
-                real-world problems while continuously learning
-                new technologies.
-              </p>
-
             </motion.div>
 
             {/* RIGHT */}
