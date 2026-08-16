@@ -32,7 +32,6 @@ function About() {
         <SectionTitle
           eyebrow="ABOUT ME"
           title="Passionate about building intelligent software that creates real-world impact."
-          description="Combining Artificial Intelligence, Machine Learning and Full Stack Engineering to build scalable applications that solve meaningful problems."
         />
 
         <div
@@ -79,9 +78,7 @@ function About() {
                 text-slate-400
               "
             >
-              I'm a Computer Science undergraduate with a strong interest in
-              Artificial Intelligence, Machine Learningand Full Stack Engineering
-              . I enjoy transforming ideas into products
+              I enjoy transforming ideas into products
               that are practical, scalable, and designed for real-world use.
             </p>
 
