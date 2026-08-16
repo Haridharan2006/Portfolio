@@ -32,6 +32,7 @@ function About() {
         <SectionTitle
           eyebrow="ABOUT ME"
           title="Passionate about building intelligent software that creates real-world impact."
+          description="I enjoy transforming ideas into products that are practical, scalable, and designed for real-world use."
         />
 
         <div
@@ -69,19 +70,6 @@ function About() {
                 scalable full stack systems.
               </span>
             </h3>
-
-            <p
-              className="
-                mt-8
-                text-lg
-                leading-9
-                text-slate-400
-              "
-            >
-              I enjoy transforming ideas into products
-              that are practical, scalable, and designed for real-world use.
-            </p>
-
             <p
               className="
                 mt-8
