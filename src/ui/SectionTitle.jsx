@@ -22,14 +22,14 @@ function SectionTitle({
           gap-3
           rounded-full
           border
-          border-blue-500/20
-          bg-blue-500/10
+          border-teal-500/20/20
+          bg-teal-500/10
           px-4
           py-2
           backdrop-blur-xl
         "
       >
-        <div className="h-2 w-2 rounded-full bg-blue-400" />
+        <div className="h-2 w-2 rounded-full bg-teal-400" />
 
         <span
           className="
@@ -37,7 +37,7 @@ function SectionTitle({
             font-semibold
             uppercase
             tracking-[0.35em]
-            text-blue-400
+            text-teal-400
           "
         >
           {eyebrow}

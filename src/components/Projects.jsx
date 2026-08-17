@@ -69,7 +69,7 @@ function Projects() {
                     border-white/10
                     bg-slate-900/40
                     backdrop-blur-xl
-                    shadow-[0_20px_80px_rgba(59,130,246,.15)]
+                    shadow-[0_20px_60px_rgba(20,184,166,.15)]
                   "
                 >
 
@@ -95,7 +95,7 @@ function Projects() {
                     text-sm
                     uppercase
                     tracking-[0.35em]
-                    text-blue-400
+                    text-teal-400
                     font-semibold
                   "
                 >
@@ -144,7 +144,7 @@ function Projects() {
                       <FaCheckCircle
                         className="
                           mt-1
-                          text-blue-400
+                          text-teal-400
                           shrink-0
                         "
                       />

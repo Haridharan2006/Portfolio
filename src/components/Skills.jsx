@@ -42,8 +42,8 @@ function Skills() {
                 p-8
                 transition-all
                 duration-300
-                hover:border-blue-500/40
-                hover:shadow-[0_15px_40px_rgba(59,130,246,.15)]
+                hover:border-teal-500/20/40
+                hover:shadow-[0_20px_60px_rgba(20,184,166,.15)]
               "
             >
               <div
@@ -62,7 +62,7 @@ function Skills() {
                       text-xs
                       uppercase
                       tracking-[0.35em]
-                      text-blue-400
+                      text-teal-400
                       font-semibold
                     "
                   >

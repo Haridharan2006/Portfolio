@@ -131,8 +131,8 @@ function About() {
                   backdrop-blur-xl
                   transition-all
                   duration-300
-                  hover:border-blue-500/60
-                  hover:shadow-[0_15px_40px_rgba(59,130,246,.18)]
+                  hover:border-teal-500/20/60
+                  hover:shadow-[0_15px_40px_rgba(20,184,166,.15)]
                 "
               >
                 <h3

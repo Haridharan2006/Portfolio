@@ -46,8 +46,8 @@ function Certifications() {
                 backdrop-blur-xl
                 transition-all
                 duration-300
-                hover:border-blue-500/40
-                hover:shadow-[0_20px_60px_rgba(59,130,246,.15)]
+                hover:border-teal-500/20/40
+                hover:shadow-[0_20px_60px_rgba(20,184,166,.15)]
               "
             >
               {/* Header */}
@@ -64,9 +64,9 @@ function Certifications() {
                     rounded-2xl
                     border
                     border-white/10
-                    bg-blue-500/10
+                    bg-teal-500/10
                     text-xl
-                    text-blue-400
+                    text-teal-400
                   "
                 >
                   <FaAward />
@@ -109,7 +109,7 @@ function Certifications() {
                 className="
                   mt-4
                   text-lg
-                  text-blue-400
+                  text-teal-400
                   font-medium
                 "
               >

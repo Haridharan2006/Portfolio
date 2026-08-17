@@ -38,8 +38,8 @@ function Experience() {
                 p-10
                 transition-all
                 duration-300
-                hover:border-blue-500/40
-                hover:shadow-[0_20px_60px_rgba(59,130,246,.15)]
+                hover:border-teal-500/20/40
+                hover:shadow-[0_20px_60px_rgba(20,184,166,.15)]
               "
             >
               {/* Header */}
@@ -58,8 +58,8 @@ function Experience() {
                       rounded-2xl
                       border
                       border-white/10
-                      bg-blue-500/10
-                      text-blue-400
+                      bg-teal-500/10
+                      text-teal-400
                       text-xl
                     "
                   >
@@ -72,7 +72,7 @@ function Experience() {
                       {job.role}
                     </h3>
 
-                    <p className="mt-2 text-lg font-medium text-blue-400">
+                    <p className="mt-2 text-lg font-medium text-teal-400">
                       {job.company}
                     </p>
 
@@ -141,7 +141,7 @@ function Experience() {
                         className="
                           mt-1
                           shrink-0
-                          text-blue-400
+                          text-teal-400
                         "
                       />
 

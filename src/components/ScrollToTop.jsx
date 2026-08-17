@@ -25,7 +25,7 @@ function ScrollToTop() {
       }
       className={`fixed bottom-8 right-8
       w-12 h-12 rounded-full
-      bg-blue-600
+      bg-teal-600
       flex items-center justify-center
       transition-all duration-300
       ${

@@ -126,7 +126,7 @@ function Contact() {
                       backdrop-blur-xl
                       transition-all
                       duration-300
-                      hover:border-blue-500/40
+                      hover:border-teal-500/20/40
                     "
                   >
 
@@ -138,8 +138,8 @@ function Contact() {
                         items-center
                         justify-center
                         rounded-xl
-                        bg-blue-500/10
-                        text-blue-400
+                        bg-teal-500/10
+                        text-teal-400
                         text-lg
                       "
                     >
@@ -223,7 +223,7 @@ function Contact() {
                   p-4
                   outline-none
                   transition
-                  focus:border-blue-500
+                  focus:border-teal-500/20
                 "
               />
 
@@ -241,7 +241,7 @@ function Contact() {
                   p-4
                   outline-none
                   transition
-                  focus:border-blue-500
+                  focus:border-teal-500/20
                 "
               />
 
@@ -260,7 +260,7 @@ function Contact() {
                   outline-none
                   resize-none
                   transition
-                  focus:border-blue-500
+                  focus:border-teal-500/20
                 "
               />
 

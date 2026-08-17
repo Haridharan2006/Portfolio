@@ -149,10 +149,10 @@ function ImageGallery({ images, title }) {
                   transition-all
                   duration-300
                   hover:-translate-y-1
-                  hover:border-blue-500
-                  hover:bg-blue-600
+                  hover:border-teal-500/20
+                  hover:bg-teal-600
                   hover:shadow-lg
-                  hover:shadow-blue-500/30
+                  hover:shadow-teal-500/30
                 "
               >
                 <FaExpand />
@@ -217,7 +217,7 @@ function ImageGallery({ images, title }) {
               max-w-[92vw]
               rounded-3xl
               object-contain
-              shadow-[0_30px_100px_rgba(0,0,0,.6)]
+              shadow-[0_20px_60px_rgba(20,184,166,.15)]
             "
           />
 

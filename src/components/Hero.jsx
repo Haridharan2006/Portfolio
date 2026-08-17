@@ -45,7 +45,7 @@ function Hero() {
             w-[520px]
             -translate-x-1/2
             rounded-full
-            bg-blue-500/10
+            bg-teal-500/10
             blur-[150px]
           "
         />
@@ -87,14 +87,6 @@ function Hero() {
             transition={{ duration: .8 }}
             className="max-w-2xl"
           >
-
-            <Badge>
-
-              <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-
-              Available for AI & Software Internships
-
-            </Badge>
 
             <motion.p
               initial={{ opacity:0 }}
@@ -228,11 +220,11 @@ function Hero() {
                   transition-all
                   duration-300
                   hover:-translate-y-1
-                  hover:border-blue-500
-                  hover:bg-blue-500/10
-                  hover:text-blue-400
+                  hover:border-teal-500/20
+                  hover:bg-teal-500/10
+                  hover:text-teal-400
                   hover:shadow-lg
-                  hover:shadow-blue-500/20
+                  hover:shadow-teal-500/20
                 "
               >
                 <FaGithub size={20} />
@@ -259,11 +251,11 @@ function Hero() {
                   transition-all
                   duration-300
                   hover:-translate-y-1
-                  hover:border-blue-500
-                  hover:bg-blue-500/10
-                  hover:text-blue-400
+                  hover:border-teal-500/20
+                  hover:bg-teal-500/10
+                  hover:text-teal-400
                   hover:shadow-lg
-                  hover:shadow-blue-500/20
+                  hover:shadow-teal-500/20
                 "
               >
                 <FaLinkedin size={20} />
@@ -290,11 +282,11 @@ function Hero() {
                   transition-all
                   duration-300
                   hover:-translate-y-1
-                  hover:border-blue-500
-                  hover:bg-blue-500/10
-                  hover:text-blue-400
+                  hover:border-teal-500/20
+                  hover:bg-teal-500/10
+                  hover:text-teal-400
                   hover:shadow-lg
-                  hover:shadow-blue-500/20
+                  hover:shadow-teal-500/20
                 "
               >
                 <FaEnvelope size={18} />
@@ -351,29 +343,13 @@ function Hero() {
                   w-[420px]
                   rounded-full
                   bg-gradient-to-r
-                  from-blue-500/20
+                  from-teal-500/20
                   to-cyan-500/10
                   blur-[90px]
                 "
               />
 
-              {/* Floating Badges */}
-
-              <FloatingBadge className="-top-6 left-0">
-                🤖 AI
-              </FloatingBadge>
-
-              <FloatingBadge className="top-10 -right-12">
-                ⚛ React
-              </FloatingBadge>
-
-              <FloatingBadge className="bottom-16 -left-12">
-                🐳 Docker
-              </FloatingBadge>
-
-              <FloatingBadge className="-bottom-5 right-4">
-                🧠 ML
-              </FloatingBadge>
+              
 
               {/* Outer Ring */}
 
@@ -384,7 +360,7 @@ function Hero() {
                   w-[430px]
                   rounded-full
                   border
-                  border-blue-500/20
+                  border-teal-500/20/20
                 "
               />
 
@@ -423,7 +399,7 @@ function Hero() {
                   object-cover
                   border-4
                   border-white/10
-                  shadow-[0_25px_80px_rgba(59,130,246,0.25)]
+                  shadow-[0_20px_60px_rgba(20,184,166,.15)]
                   sm:h-[340px]
                   sm:w-[340px]
                   lg:h-[390px]

@@ -80,7 +80,7 @@ function Navbar() {
               duration-300
               ${
                 scrolled
-                  ? "px-6 py-3 shadow-[0_10px_40px_rgba(0,0,0,.35)]"
+                  ? "px-6 py-3 shadow-[0_20px_60px_rgba(20,184,166,.15)]"
                   : "px-7 py-5"
               }
             `}

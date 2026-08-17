@@ -23,30 +23,30 @@ function Button({
     whitespace-nowrap
     focus:outline-none
     focus-visible:ring-2
-    focus-visible:ring-blue-500/50
+    focus-visible:ring-teal-500/50
     focus-visible:ring-offset-2
-    focus-visible:ring-offset-slate-950
+    focus-visible:ring-offset-[#0b0f0f]
     disabled:pointer-events-none
-    disabled:opacity-60
+    disabled:opacity-50
     disabled:cursor-not-allowed
   `;
 
   const variants = {
     primary: `
       border
-      border-blue-500/20
+      border-teal-500/20
       bg-gradient-to-r
-      from-blue-600
-      via-blue-500
-      to-cyan-500
+      from-teal-600
+      via-teal-500
+      to-teal-400
       text-white
       shadow-lg
-      shadow-blue-500/20
+      shadow-teal-500/20
       enabled:hover:-translate-y-1
       enabled:hover:shadow-xl
-      enabled:hover:shadow-blue-500/35
-      enabled:hover:from-blue-500
-      enabled:hover:to-cyan-400
+      enabled:hover:shadow-teal-500/30
+      enabled:hover:from-teal-500
+      enabled:hover:to-teal-300
       enabled:active:scale-[0.98]
     `,
 
@@ -57,11 +57,11 @@ function Button({
       backdrop-blur-xl
       text-slate-200
       enabled:hover:-translate-y-1
-      enabled:hover:border-blue-500/50
-      enabled:hover:bg-blue-500/10
+      enabled:hover:border-teal-500/40
+      enabled:hover:bg-teal-500/10
       enabled:hover:text-white
       enabled:hover:shadow-lg
-      enabled:hover:shadow-blue-500/15
+      enabled:hover:shadow-teal-500/10
       enabled:active:scale-[0.98]
     `,
   };

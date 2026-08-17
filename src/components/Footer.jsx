@@ -102,9 +102,9 @@ function Footer() {
                       backdrop-blur-xl
                       transition-all
                       duration-300
-                      hover:border-blue-500
-                      hover:bg-blue-500/10
-                      hover:text-blue-400
+                      hover:border-teal-500/20
+                      hover:bg-teal-500/10
+                      hover:text-teal-400
                     "
                     aria-label={social.label}
                   >
@@ -152,12 +152,7 @@ function Footer() {
               "
             >
 
-              Built with
-
-              <FaHeart className="text-red-500" />
-
-              using React, Tailwind CSS &
-              Framer Motion.
+              Built using React, Tailwind CSS & Framer Motion.
 
             </p>
 
